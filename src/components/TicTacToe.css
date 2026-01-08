@@ -1,0 +1,114 @@
+.tictactoe-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tictactoe-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.status-message {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  min-height: 40px;
+}
+
+.board {
+  display: inline-block;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: none;
+  margin: 5px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.square:hover:not(:disabled) {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.square:disabled {
+  cursor: not-allowed;
+}
+
+.square.winning {
+  background-color: #90EE90;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.reset-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.reset-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .square {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+}
