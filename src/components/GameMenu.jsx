@@ -13,6 +13,12 @@ function GameMenu({ onSelectGame }) {
       name: 'Tic-Tac-Toe', 
       description: 'Get three in a row to win!',
       icon: '⭕'
+    },
+    { 
+      id: 'memory', 
+      name: 'Memory Match', 
+      description: 'Match all the pairs to win!',
+      icon: '🧠'
     }
   ];
 
