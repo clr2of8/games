@@ -13,6 +13,12 @@ function GameMenu({ onSelectGame }) {
       name: 'Tic-Tac-Toe', 
       description: 'Get three in a row to win!',
       icon: '⭕'
+    },
+    { 
+      id: 'snake', 
+      name: 'Snake', 
+      description: 'Navigate a growing snake to collect food!',
+      icon: '🐍'
     }
   ];
 
