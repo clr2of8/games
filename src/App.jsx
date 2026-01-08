@@ -3,6 +3,7 @@ import './App.css'
 import GameMenu from './components/GameMenu'
 import Hangman from './components/Hangman'
 import TicTacToe from './components/TicTacToe'
+import Pong from './components/Pong'
 
 function App() {
   const [currentGame, setCurrentGame] = useState(null)
@@ -20,6 +21,7 @@ function App() {
       {!currentGame && <GameMenu onSelectGame={handleSelectGame} />}
       {currentGame === 'hangman' && <Hangman onBackToMenu={handleBackToMenu} />}
       {currentGame === 'tictactoe' && <TicTacToe onBackToMenu={handleBackToMenu} />}
+      {currentGame === 'pong' && <Pong onBackToMenu={handleBackToMenu} />}
     </div>
   )
 }
