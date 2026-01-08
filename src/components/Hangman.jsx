@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Hangman.css';
 
 const WORDS = [
@@ -8,19 +8,16 @@ const WORDS = [
 
 const MAX_WRONG_GUESSES = 6;
 
+const getRandomWord = () => WORDS[Math.floor(Math.random() * WORDS.length)];
+
 function Hangman({ onBackToMenu }) {
-  const [word, setWord] = useState('');
+  const [word, setWord] = useState(getRandomWord());
   const [guessedLetters, setGuessedLetters] = useState([]);
   const [wrongGuesses, setWrongGuesses] = useState(0);
   const [gameStatus, setGameStatus] = useState('playing'); // 'playing', 'won', 'lost'
 
-  useEffect(() => {
-    resetGame();
-  }, []);
-
   const resetGame = () => {
-    const randomWord = WORDS[Math.floor(Math.random() * WORDS.length)];
-    setWord(randomWord);
+    setWord(getRandomWord());
     setGuessedLetters([]);
     setWrongGuesses(0);
     setGameStatus('playing');
