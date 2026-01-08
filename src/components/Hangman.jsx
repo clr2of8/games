@@ -68,12 +68,12 @@ function Hangman({ onBackToMenu }) {
 
   const renderHangman = () => {
     const parts = [
-      <circle key="head" cx="140" cy="50" r="20" />,
-      <line key="body" x1="140" y1="70" x2="140" y2="120" />,
-      <line key="leftArm" x1="140" y1="80" x2="120" y2="100" />,
-      <line key="rightArm" x1="140" y1="80" x2="160" y2="100" />,
-      <line key="leftLeg" x1="140" y1="120" x2="120" y2="150" />,
-      <line key="rightLeg" x1="140" y1="120" x2="160" y2="150" />
+      <circle cx="140" cy="50" r="20" />,
+      <line x1="140" y1="70" x2="140" y2="120" />,
+      <line x1="140" y1="80" x2="120" y2="100" />,
+      <line x1="140" y1="80" x2="160" y2="100" />,
+      <line x1="140" y1="120" x2="120" y2="150" />,
+      <line x1="140" y1="120" x2="160" y2="150" />
     ];
 
     return (
@@ -85,8 +85,8 @@ function Hangman({ onBackToMenu }) {
         <line x1="140" y1="10" x2="140" y2="30" stroke="black" strokeWidth="3" />
         
         {/* Body parts */}
-        {parts.slice(0, wrongGuesses).map(part => 
-          <g key={part.key} stroke="black" strokeWidth="3" fill="none">
+        {parts.slice(0, wrongGuesses).map((part, index) => 
+          <g key={index} stroke="black" strokeWidth="3" fill="none">
             {part}
           </g>
         )}
